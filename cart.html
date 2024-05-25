@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cart BestBuy</title>
+    <link rel="stylesheet" type="text/css" href="cart.css">
+</head>
+<body>
+    <nav>
+        <ul class="some">
+            <h1 id="best">BestBuy</h1>
+            <div class="test">
+                <li id="home"><a href="homepage.html">Home</a></li>
+                <li id="buybooks"><a href="buybooks.html">BuyBooks</a></li>
+                <li id="wishcopy"><a href="wishlist.html">Wishlist</a></li>
+                <li id="sign-out"><a href="newarrivals.html">Sign Out</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <header>
+        
+        <h1>Shopping Cart</h1>
+        <!-- <p style="font-size: 100;">The books you have added to cart will be shown here.</p> -->
+    </header>
+
+    <main>
+        <section id="cart-items">
+            <!-- Sample books added dynamically -->
+            <div>
+                <img src="http://3.bp.blogspot.com/-HxVxhy2RH-0/VANY1W2HZRI/AAAAAAAAEig/vi6vPNg85ns/s1600/TheHungerGames.jpg" style="width:200px;height:300px;">
+                <p>The Hunger Games</p>
+                <p>Suzanne Collins</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 1399</b></span>
+                    <span style="color: black;"><del>&#8377 1999</del></span>
+                    <span style="color: rgb(10, 160, 10);">30 &#37 off </span>
+                </p>
+                <button class="r1" onclick="removeFromCart(this)">Remove from cart</button>
+            </div>
+
+            <br>
+
+            <div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588286863i/634583.jpg" style="width:200px;height:300px;">
+                <p>Wings of Fire</p>
+                <p>Dr.A.P.J.Abdul Kalam</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 349</b></span>
+                    <span style="color: black;"><del>&#8377 599</del></span>
+                    <span style="color: rgb(10, 160, 10);">42 &#37 off </span>
+                </p>
+                <button class="r1" onclick="removeFromCart(this)">Remove from cart</button>
+            </div>
+
+            <br>
+
+            <div>
+                <img src="https://i5.walmartimages.com/asr/d71d9f97-bff4-4d83-a4dc-2e506cea26f1_1.cbe1c88d076ff9ad4b866388debbea67.jpeg" style="width:200px;height:300px;">
+                <p>Coding For Beginners</p>
+                <p>Alexander Cane</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 1599</b></span>
+                    <span style="color: black;"><del>&#8377 1999</del></span>
+                    <span style="color: rgb(10, 160, 10);">20 &#37 off </span>
+                </p>
+                <button class="r1" onclick="removeFromCart(this)">Remove from cart</button>
+            </div>
+        </section>
+        <br><br><br>
+ 
+        <div class="column2" style="text-align: center; background-color: rgba(226, 211, 211, 0.99); width:21%;margin-left: 36.5%;padding: 9px;border-radius: 13px; ">
+            <p id="subtotal">Subtotal(3 items) : <span style="color: red;"><b>&#8377 3347</b></span></p>
+            <br>
+            <button class="r2" onclick="proceedToPay()">Proceed to pay</button>
+        </div>
+    </main>
+
+    <br>
+
+    <marquee> Customer Care: 1800-8811788117.... Mail: bestbuy@gmail.com</marquee>
+
+    <footer id="footer">
+        <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function removeFromCart(button) {
+            var parentDiv = button.parentNode;
+            parentDiv.parentNode.removeChild(parentDiv);
+            calculateTotal(); 
+            alert('Successfully removed from the cart'); 
+        }
+
+        function calculateTotal() {
+            var cartItems = document.querySelectorAll('#cart-items > div');
+            var subtotal = 0;
+            cartItems.forEach(function(item) {
+                var priceText = item.querySelector('span > b').innerText; 
+                var price = parseFloat(priceText.replace('₹', '')); 
+                subtotal += price; 
+            });
+
+            // Update subtotal display
+            var subtotalElement = document.getElementById('subtotal');
+            if (cartItems.length === 0) {
+                subtotalElement.innerHTML = 'Subtotal(0 items) : <span style="color: red;"><b>#₹ 0.00</b></span>';
+            } else {
+                subtotalElement.innerHTML = 'Subtotal(' + cartItems.length + ' items) : <span style="color: red;"><b>₹ ' + subtotal.toFixed(2) + '</b></span>';
+            }
+        }
+
+        function proceedToPay() {
+            var cartItems = document.querySelectorAll('#cart-items > div');
+            if (cartItems.length === 0) {
+                alert('No items in your cart');
+            } else {
+                window.location.href = 'paymentgateway.html';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BestBuy</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            padding: 120px;
+            background: url("background-template-with-kids-around-book-vector.jpg") no-repeat center fixed;
+            background-size: cover;
+            position: relative;
+            height: 100%;
+            width: -100%;
+            z-index: -1;
+
+        }
+
+        header {
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            padding: -10px 5px;
+            background: rgb(17, 17, 216);
+            display: flex;
+            background-attachment: fixed;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: -5px;
+            background: rgb(17, 17, 216);
+            font-style: oblique;
+            color: #f9f7f7;
+            text-align: center;
+            text-shadow: 5px 5px 5px black;
+
+        }
+
+        #register {
+            display: flex;
+            border: 2px solid black;
+            border-radius: 70px;
+            overflow: hidden;
+            height: 470px;
+            width: 350px;
+            padding: 15px;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            transform: translateY(80px);
+        }
+
+
+        
+        h1 {
+            color: rgb(17, 17, 216);
+            text-transform: uppercase;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: oblique;
+            text-shadow: 2px 2px 2px rgb(17, 17, 216);
+            padding: 5px;
+        }
+
+
+        #bb {
+            margin-left: 1%;
+            font-style: oblique;
+            color: #f9f7f7;
+            text-shadow: 5px 5px 5px black;
+        }
+
+        .input-box1 {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            border-bottom: 2px solid #01060a;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+
+        .input-box1 label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            font-size: 1em;
+            color: #162938;
+            font-weight: 500;
+            font-style: oblique;
+            pointer-events: none;
+            transform: translateY(-40%);
+            transition: 0.5s;
+            padding:50px 0;
+            background-color: none;
+        }
+
+
+        .input-box1 input {
+            width: 90%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: #162938;
+            font-style: oblique;
+            font-weight: 100;
+            padding: 0 40px 0 5px;
+            background-color: none;
+        }
+
+        
+        .input-box1 input:focus~label, .input-box1 input:valid~label {
+            top: -5px;
+        }
+
+
+        .butn {
+
+            width: 100%;
+            height: 50px;
+            background-color: blue;
+            text-shadow: 2px 2px 5px whitesmoke;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            font-size: 1.2em;
+            color: #010a10;
+            line-height: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg", height="90px", width="80px">
+        <h1 id="bb">BestBuy</h1>
+    </header>
+
+    <div id="register" class="from-box register">
+        <form id="registerForm" action="login.html" method="post">
+            <h1>Register</h1>
+            <div class="input-box1">
+                <p class="icon"><ion-icon name="person"></ion-icon></p>
+                <input id="username" type="text" name="username" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box1">
+                <p class="icon"><ion-icon name="mail"></ion-icon></p>
+                <input id="email" type="email" name="email" required>
+                <label>Email</label>
+            </div>            
+            <div class="input-box1">
+                <p class="icon"><ion-icon name="lock-closed"></ion-icon></p>
+                <input id="password" type="password" name="password" required>
+                <label>Password</label>
+            </div>            
+            <div class="input-box1">
+                <p class="icon"><ion-icon name="lock-closed"></ion-icon></p>
+                <input id="conform" type="password" name="password" required>
+                <label>conform Password</label>
+            </div>
+            <br>
+            <div class="accept">
+                <label><input type="checkbox" required>I agree to the terms & conditions</label>
+            </div>
+            <br>
+            <button type="submit" class="butn">SIGN UP</button>
+            <div class="login-form">
+                <p>Already have an account? <a href="login.html" class="login_page">SignIn</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+</body>
+
+<footer>
+    <p>@2024 online Book Store</p>
+</footer>
+
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Buy books BestBuy</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: #046ab3;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+section div {
+    text-align: center;
+    margin: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+section p {
+    margin: 8px 0;
+}
+
+section button {
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+section button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #17043a;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.search-container {
+  float: right;
+}
+
+input[type=text] {
+  padding: 4px;
+  margin-top: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+.search-container button {
+  float: right;
+  padding: 4px;
+  margin-top: 6px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+#sortOptions {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#sortOptions option {
+    font-size: 16px;
+}
+
+.filtered {
+        display: block !important;
+    }
+
+    /* Styles for unfiltered books */
+    .unfiltered {
+        display: none;
+    }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <div class="search-container">
+                <form id="searchForm" action="searchForm">
+                  <input type="text" id="searchInput" placeholder="Search.." name="search">
+                  <button type="submit">Search</button>
+                </form>
+              </div>
+              <select id="sortOptions">
+                <option value="">Sort By</option>
+                <option value="priceLowToHigh">Price: Low to High</option>
+                <option value="priceHighToLow">Price: High to Low</option>
+                <option value="discountLowToHigh">Discount: Low to High</option>
+                <option value="discountHighToLow">Discount: High to Low</option>
+            </select>
+            
+              
+        </ul>
+
+    </nav>
+    
+    <main id="bookContainer">
+        <section>
+            <div>
+                <img src="https://media.instamojo.com/imgs/ee258e0927cd44a08783bbff795dc6ba.jpg" style="width:200px;height:300px;">
+                <p>Quantitative Aptitude Made Easy</p>
+                <p>Ramandeep Singh</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 499</b></span>
+                    <span style="color: black;"><del>&#8377 649</del></span>
+                    <span style="color: rgb(10, 160, 10);">24 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://img.theculturetrip.com/1440x/smart/wp-content/uploads/2017/08/9780330458535.jpg" style="width:200px;height:300px;">
+                <p>The Place of Illusions</p>
+                <p>Chitra Banarjee Divakaruni</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 749</b></span>
+                    <span style="color: black;"><del>&#8377 1199</del></span>
+                    <span style="color: rgb(10, 160, 10);">38 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="http://prodimage.images-bn.com/pimages/9780486414171_p0_v2_s1200x630.jpg" style="width:200px;height:300px;">
+                <p>Gitanjali</p>
+                <p>Rabindranath Tagore</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 349</b></span>
+                    <span style="color: black;"><del>&#8377 999</del></span>
+                    <span style="color: rgb(10, 160, 10);">65 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/71Ui-NwYUmL.jpg" style="width:200px;height:300px;">
+                <p>Harry Potter</p>
+                <p>J.K.Rowling</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 699</b></span>
+                    <span style="color: black;"><del>&#8377 799</del></span>
+                    <span style="color: rgb(10, 160, 10);">12 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="http://3.bp.blogspot.com/-HxVxhy2RH-0/VANY1W2HZRI/AAAAAAAAEig/vi6vPNg85ns/s1600/TheHungerGames.jpg" style="width:200px;height:300px;">
+                <p>The Hunger Games</p>
+                <p>Suzanne Collins</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 1399</b></span>
+                    <span style="color: black;"><del>&#8377 1999</del></span>
+                    <span style="color: rgb(10, 160, 10);">30 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://i5.walmartimages.com/asr/d71d9f97-bff4-4d83-a4dc-2e506cea26f1_1.cbe1c88d076ff9ad4b866388debbea67.jpeg" style="width:200px;height:300px;">
+                <p>Coding For Beginners</p>
+                <p>Alexander Cane</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 1599</b></span>
+                    <span style="color: black;"><del>&#8377 1999</del></span>
+                    <span style="color: rgb(10, 160, 10);">20 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+        </section>
+        <section>
+            <div>
+                <img src="https://img1.od-cdn.com/ImageType-100/5054-1/%7BF72BB9B3-F8EE-4C88-B60D-1A7D094F60EA%7DImg100.jpg" style="width:200px;height:300px";>
+                <p>Story Thieves</p>
+                <p>James Riley</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 525</b></span></span>
+                    <span style="color: black;"><del>&#8377 799</del></span>
+                    <span style="color: rgb(10, 160, 10);">35 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.W1ngiF2AkQaO78CY9yC1HQHaLd&pid=Api&P=0&h=180" style="width:200px;height:300px";>
+                <p>To Kill a Mockingbird</p>
+                <p>Harper Lee</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 649</b></span></span>
+                    <span style="color: black;"><del>&#8377 699</del></span>
+                    <span style="color: rgb(10, 160, 10);">7 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="http://img.allw.mn/content/lifestyle/2013/05/2_the-fault-in-our-stars-by-john-green.jpg" style="width:200px;height:300px";>
+                <p>The Fault in Our Stars</p>
+                <p>John Green</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 499</b></span></span>
+                    <span style="color: black;"><del>&#8377 849</del></span>
+                    <span style="color: rgb(10, 160, 10);">41 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://images.thenile.io/r1000/9781426331992.jpg" style="width:200px;height:300px;">
+                <p>World Atlas</p>
+                <p>National Geographic Kids</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 199</b></span>
+                    <span style="color: black;"><del>&#8377 299</del></span>
+                    <span style="color: rgb(10, 160, 10);">33 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="http://3.bp.blogspot.com/-9Kp2Sd55N74/TYl48fAJspI/AAAAAAAABEQ/Zb3r0NOBKQg/s1600/Divergent+by+Veronica+Roth.jpg" style="width:200px;height:300px;">
+                <p>Divergent</p>
+                <p>Veronica Roth</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 849</b></span>
+                    <span style="color: black;"><del>&#8377 1999</del></span>
+                    <span style="color: rgb(10, 160, 10);">57 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://cdn2.penguin.com.au/covers/original/9780143133223.jpg" style="width:200px;height:300px;">
+                <p>The Brave Learner</p>
+                <p>Julie Bogart</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 449</b></span>
+                    <span style="color: black;"><del>&#8377 1199</del></span>
+                    <span style="color: rgb(10, 160, 10);">62 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+        </section>
+        <section>
+            <div>
+                <img src="https://tse2.mm.bing.net/th?id=OIP.u1jvgQh_S5zIR3e4uX5oNwHaLH&pid=Api&P=0&h=180" style="width:200px;height:300px;">
+                <p>The Hobbit</p>
+                <p>J.K.R.Tolkien</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 1699</b></span>
+                    <span style="color: black;"><del>&#8377 1899</del></span>
+                    <span style="color: rgb(10, 160, 10);">10 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588286863i/634583.jpg" style="width:200px;height:300px;">
+                <p>Wings of Fire</p>
+                <p>Dr.A.P.J.Abdul Kalam</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 349</b></span>
+                    <span style="color: black;"><del>&#8377 599</del></span>
+                    <span style="color: rgb(10, 160, 10);">42 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://tse3.explicit.bing.net/th?id=OIP.bkKT_vZBGSyFz-GxJ1WRYgAAAA&pid=Api&P=0&h=180" style="width:200px;height:300px;">
+                <p>The ClassRoom Management</p>
+                <p>Sarah F.Jondahl</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 849</b></span>
+                    <span style="color: black;"><del>&#8377 1599</del></span>
+                    <span style="color: rgb(10, 160, 10);">46 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="http://3.bp.blogspot.com/-Uj-jROgB_hw/Uz2wBTbMR8I/AAAAAAAACA8/-l6lDeqg03w/s1600/monk.gif" style="width:200px;height:300px;">
+                <p>The Monk Who sold his Ferrari</p>
+                <p>Robin Sharma</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 299</b></span>
+                    <span style="color: black;"><del>&#8377 349</del></span>
+                    <span style="color: rgb(10, 160, 10);">15 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="http://www.bfbooks.com/core/media/media.nl?id=67987&c=426867&h=9bb910e1e1dc3a1c2015&resizeid=-3" style="width:200px;height:300px;">
+                <p>Teaching From the Rest</p>
+                <p>Sarah Mackenzie</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 999</b></span>
+                    <span style="color: black;"><del>&#8377 1449</del></span>
+                    <span style="color: rgb(10, 160, 10);">33 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://i1.wp.com/ashishb.net/wp-content/uploads/2021/07/psychology-of-money.jpg?w=971&ssl=1" style="width:200px;height:300px;">
+                <p>The Psychology of Money</p>
+                <p>Morgan Housel</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 275</b></span>
+                    <span style="color: black;"><del>&#8377 499</del></span>
+                    <span style="color: rgb(10, 160, 10);">45 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var searchValue = document.getElementById("searchInput").value.toLowerCase(); // Get search input value
+
+            var books = document.querySelectorAll("section div"); // Get all book elements
+
+            var found = false; // Flag to track if any book matches the search query
+
+            books.forEach(function(book) {
+                var title = book.querySelector("p:first-of-type").textContent.toLowerCase(); // Get book title
+
+                // Check if the title contains the search value
+                if (title.includes(searchValue)) {
+                    book.style.display = "block"; // Display the book
+                    found = true; // Update flag to true
+                } else {
+                    book.style.display = "none"; // Hide the book
+                }
+            });
+
+            // If no book matches the search query, display a message
+            if (!found) {
+                alert("No books found matching your search query.");
+            }
+        });
+
+        
+    </script>
+
+    <script>
+        document.getElementById("sortOptions").addEventListener("change", function() {
+    var sortValue = this.value; // Get the selected sorting option
+
+    var booksContainer = document.getElementById("bookContainer");
+    var books = booksContainer.querySelectorAll("section div");
+
+    var sortedBooks = Array.from(books); // Convert NodeList to array for sorting
+
+    sortedBooks.sort(function(a, b) {
+        var priceA = parseFloat(a.querySelector("span:first-of-type b").textContent.replace(/\D/g, ''));
+        var priceB = parseFloat(b.querySelector("span:first-of-type b").textContent.replace(/\D/g, ''));
+        var discountA = parseFloat(a.querySelector("span:last-of-type").textContent.replace(/\D/g, ''));
+        var discountB = parseFloat(b.querySelector("span:last-of-type").textContent.replace(/\D/g, ''));
+
+        if (sortValue === "priceLowToHigh") {
+            return priceA - priceB;
+        } else if (sortValue === "priceHighToLow") {
+            return priceB - priceA;
+        } else if (sortValue === "discountLowToHigh") {
+            return discountA - discountB;
+        } else if (sortValue === "discountHighToLow") {
+            return discountB - discountA;
+        } else {
+            return 0;
+        }
+    });
+
+    // Remove existing books from container
+    booksContainer.innerHTML = "";
+
+    // Append sorted books to container
+    sortedBooks.forEach(function(book) {
+        booksContainer.appendChild(book);
+    });
+});
+    </script>
+
+    
+
+    
+</body>
+</html>

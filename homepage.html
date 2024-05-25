@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home BestBuy</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #5aa8e3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #046ab3;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    background-color: #3498db;
+    color: #fff;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .menu-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .menu-content a:hover {background-color: #f1f1f1}
+  
+  .menu:hover .menu-content {
+    display: block;
+  }
+  
+  h2 {
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: -1200px;
+    color: black;
+    text-shadow: 2px 2px 5px rgb(239, 109, 109);
+    word-spacing: 2px;
+    white-space: nowrap;
+    text-decoration: underline;
+
+  }
+  .menu:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main section div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+main section div:hover {
+    box-shadow: 0 4px 8px rgba(241, 3, 3, 0.1);
+}
+
+main section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.ab {
+    position: right;
+    margin-right: 1100px;
+}
+.menu {
+    position: left;
+    margin-left: -1400px;
+    margin-top: -200px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Online Bookstore</h1>
+        <p>Discover a wide range of books and order from the comfort to your home!</p>
+    <div class="menu">
+        <button class ="dropbtn">Menu</button>
+        <div class="menu-content">
+            <a href="ViewProfile.html">View Profile</a>
+            <a href="PreviousOrders.html">Previous Orders</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="ab"><a href="buybooks.html">Buy Books</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="newarrivals.html">Sign Out</a></li>
+        </ul>
+    </nav>
+
+
+
+    <main>
+        <section>
+            <h2>Deals of the day</h2>
+        </section>
+        <section>
+            <div>
+                <img src="https://media.instamojo.com/imgs/ee258e0927cd44a08783bbff795dc6ba.jpg" style="width:200px;height:300px;">
+                <p>Quantitative Aptitude Made Easy</p>
+                <p>Ramandeep Singh</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 499</b></span>
+                    <span style="color: black;"><del>&#8377 649</del></span>
+                    <span style="color: rgb(10, 160, 10);">24 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://img1.od-cdn.com/ImageType-100/5054-1/%7BF72BB9B3-F8EE-4C88-B60D-1A7D094F60EA%7DImg100.jpg" style="width:200px;height:300px";>
+                <p>Story Thieves</p>
+                <p>James Riley</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 525</b></span></span>
+                    <span style="color: black;"><del>&#8377 799</del></span>
+                    <span style="color: rgb(10, 160, 10);">35 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://i5.walmartimages.com/asr/d71d9f97-bff4-4d83-a4dc-2e506cea26f1_1.cbe1c88d076ff9ad4b866388debbea67.jpeg" style="width:200px;height:300px;">
+                <p>Coding For Beginners</p>
+                <p>Alexander Cane</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 1599</b></span>
+                    <span style="color: black;"><del>&#8377 1999</del></span>
+                    <span style="color: rgb(10, 160, 10);">20 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://images.thenile.io/r1000/9781426331992.jpg" style="width:200px;height:300px;">
+                <p>World Atlas</p>
+                <p>National Geographic Kids</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 199</b></span>
+                    <span style="color: black;"><del>&#8377 299</del></span>
+                    <span style="color: rgb(10, 160, 10);">33 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+
+                
+        
+            
+        </section>
+
+        <section>
+            <h2>Popular Books</h2>
+        </section>
+        <section>
+            <div>
+                <img src="https://i1.wp.com/ashishb.net/wp-content/uploads/2021/07/psychology-of-money.jpg?w=971&ssl=1" style="width:200px;height:300px;">
+                <p>The Psychology of Money</p>
+                <p>Morgan Housel</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 275</b></span>
+                    <span style="color: black;"><del>&#8377 499</del></span>
+                    <span style="color: rgb(10, 160, 10);">45 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="http://3.bp.blogspot.com/-Uj-jROgB_hw/Uz2wBTbMR8I/AAAAAAAACA8/-l6lDeqg03w/s1600/monk.gif" style="width:200px;height:300px;">
+                <p>The Monk Who sold his Ferrari</p>
+                <p>Robin Sharma</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 299</b></span>
+                    <span style="color: black;"><del>&#8377 349</del></span>
+                    <span style="color: rgb(10, 160, 10);">15 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+            <p></p>
+            <div>
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588286863i/634583.jpg" style="width:200px;height:300px;">
+                <p>Wings of Fire</p>
+                <p>Dr.A.P.J.Abdul Kalam</p>
+                <p>
+                    <span style="color: red;"><b>&#8377 349</b></span>
+                    <span style="color: black;"><del>&#8377 599</del></span>
+                    <span style="color: rgb(10, 160, 10);">42 &#37 off </span>
+                </p>
+                <button onclick="alert('Added to cart')">Add to Cart</button>
+                <button onclick="alert('Added to wishlist')">Add to Wishlist</button>
+            </div>
+        </section>
+    </main>
+    <p></p>
+    <marquee> Customer Care: 1800-8811788117.... Mail: bestbuy@gmail.com</marquee>
+
+    <footer>
+        <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

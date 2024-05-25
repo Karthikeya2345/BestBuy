@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About us BestBuy</title>
+    <style>
+        body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    background-color: #4285f4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4285f4;
+}
+
+marquee {
+    background-color: #ffd700;
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Function to change the color of the header randomly
+    function changeHeaderColor() {
+        var colors = ["#FF5733", "#33FFC8", "#3377FF", "#33FF5E", "#FF33E9"];
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.querySelector("header").style.backgroundColor = randomColor;
+    }
+
+    // Event listener to change the header color when clicked
+    document.querySelector("header").addEventListener("click", function() {
+        changeHeaderColor();
+    });
+
+    // Function to show a popup when the footer is hovered over
+    function showPopup() {
+        alert("Thank you for visiting our website!");
+    }
+
+    // Event listener to show popup when footer is hovered over
+    document.querySelector("footer").addEventListener("mouseenter", function() {
+        showPopup();
+    });
+});
+
+    </script>
+    <nav>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>BestBuy</h1>
+        <p>Your go-to place for a wide range of books!</p>
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Welcome to our online books ordering portal. We are passionate about connecting readers with their favourite books
+            and providing a convenient platform for exploring and purchasing a diverse selection of literature.</p>
+
+        <p>Our mission is to make the world of books accessible to everyone, offering a seamless and enjoyable shopping
+            experience. Whether you are a book enthusiast, a student, or someone looking for the perfect gift, we have a
+            collection that caters to all tastes and preferences.</p>
+
+        <p>With a commitment to quality and customer satisfaction, we strive to bring you the latest releases, timeless
+            classics, and niche titles. Our user-friendly interface ensures a hassle-free browsing and ordering process,
+            making it easy for you to discover new reads and revisit old favorites.</p>
+    </section>
+
+    <section>
+        <h2>Our Team</h2>
+        <p>We are a dedicated team of book lovers, technologists, and customer service professionals. Our diverse
+            backgrounds and shared passion for literature drive us to create an online bookstore that meets the needs of
+            every reader.</p>
+
+        <p>Feel free to reach out to us with any questions, suggestions, or feedback. We value your input and are
+            committed to continuously improving our platform to enhance your overall experience.</p>
+    </section>
+    <p></p>
+
+    <marquee> Customer Care: 1800-8811788117.... Mail: bestbuy@gmail.com</marquee>
+
+    <footer>
+        <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

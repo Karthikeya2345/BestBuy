@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Details</title>
+    <style>
+
+        .container {
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 20px;
+            width: 70%;
+            text-align: center;
+        }
+
+        h2 {
+            color: black;
+            background-color: rgb(139, 139, 135);
+        }
+
+        table {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        h3 {
+            color: black;
+            background-color: rgb(250, 249, 249);
+            margin: 0;
+        }
+
+        h4 {
+            margin: 0;
+        }
+
+        button {
+            background-color: rgb(7, 144, 41);
+            color: black;
+            padding: 5px 10px;
+            text-align: center;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .two {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Order Successful</h2>
+        <table>
+            <tr>
+                <td><h3>Order ID :</h3></td>
+                <td><h3>984567787</h3></td>
+            </tr>
+            <tr>
+                <td><h3>Transaction ID:</h3></td>
+                <td><h3>3WC385674</h3></td>
+            </tr>
+        </table>
+        <br>
+        <h4>Thanks For Buying !</h4>
+        <br>
+        <button onclick="window.print()">Print Receipt</button>
+        <button onclick="window.location.href='homepage.html'">Home</button>
+    </div>
+</body>
+
+</html>

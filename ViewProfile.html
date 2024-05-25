@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #5aa8e3;
+            color: white;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px;
+            font-style: oblique;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        footer {
+            background-color:#5aa8e3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-style: oblique;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        button {
+            width: 5%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            transform: background-color,scale();
+        }
+
+        button:hover {
+            background-color: #4caf50;
+            transform: scale(2px);
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>Customer Profile</h1>
+        <button type="button" onclick="window.location.href='homepage.html'">Home</button>
+    </nav>
+
+    <section>
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> John</p>
+        <p><strong>Email:</strong> John@gmail.com</p>
+        <p><strong>Phone No.:</strong> 9876543210</p>
+        <p><strong>Address:</strong> 1-23, Vellore, Tamil Nadu - 632014</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Books Ordering Portal</p>
+    </footer>
+
+</body>
+
+</html>

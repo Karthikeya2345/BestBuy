@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Us BestBuy</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="some">
+            <h1 id="best">BestBuy</h1>
+            <div class="test">
+                <li id="home"><a href="homepage.html">Home</a></li>
+                <li id="buybooks"><a href="buybooks.html">BuyBooks</a></li>
+                <li id="about-us"><a href="AboutUs.html">About Us</a></li>
+                <li id="sign-out"><a href="newarrivals.html">Sign Out</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <br>
+
+    <main>
+        <form class="border" id="contactForm" onsubmit="return validateForm()">
+            <div class="box">
+                <label for="name"></label><br>
+                <input type="text" id="fname" name="name" placeholder="Name" required><br>
+                <label for="cno"></label><br>
+                <input type="number" id="cno" name="cno" placeholder="Contact Number" title="Please enter a 10-digit contact number" required><br>
+                <div id="contactNumberError" style="display: none; color: red;">Please enter a valid 10-digit number</div>
+                <label for="email"></label><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <label for="issue"></label><br><br>
+                <input type="text" id="issue" name="issue" placeholder="Issue" required>
+                <button id="sub">Submit</button>
+            </div>
+        </form>
+
+        <br>
+
+        <marquee class="mark"> Customer Care: 1800-8811788117.... Mail: bestbuy@gmail.com</marquee>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        function validateForm() {
+            var name = document.getElementById("fname").value;
+            var contactNumber = document.getElementById("cno").value;
+            var email = document.getElementById("email").value;
+            var issue = document.getElementById("issue").value;
+
+            if (name == "" || contactNumber == "" || email == "" || issue == "") {
+                alert("Please fill in all fields.");
+                return false;
+            } else if (contactNumber.length!=10) {
+                alert("Please enter a valid 10-digit contact number.");
+                return false;
+            } else {
+                alert("Your issue is successfully recorded.");
+                return true;
+            }
+        }
+
+        document.getElementById("cno").addEventListener("input", function() {
+            var contactNumber = this.value;
+            var errorMessage = document.getElementById("contactNumberError");
+            if (contactNumber.length !== 10) {
+                errorMessage.style.display = "block";
+            } else {
+                errorMessage.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

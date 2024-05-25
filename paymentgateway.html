@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <title>Payment Gateway</title>
+</head>
+<body>
+    <form action="ordersuccessful.html" onmakepaymen method="post">
+        <div class="container">
+            <h1>Debit Card Payment</h1>
+
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" maxlength="19" oninput="formatCardNumber()" placeholder="Enter the Card Number" required>
+            <div id="errorMessage" style="color: red; display: none;">Please enter a valid 16-digit card number</div>
+            <script>
+                
+function formatAndValidateCardNumber() {
+    const cardInput = document.getElementById('cardNumber');
+    const errorMessage = document.getElementById('errorMessage');
+
+ 
+    let formattedValue = cardInput.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim();
+    cardInput.value = formattedValue;
+
+
+    const cardNumber = cardInput.value.replace(/\s/g, '');
+
+    if (cardNumber.length !== 16) {
+        errorMessage.style.display = 'block';
+    } else {
+        errorMessage.style.display = 'none';
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cardInput = document.getElementById('cardNumber');
+    const errorMessage = document.getElementById('errorMessage');
+
+    cardInput.addEventListener('input', formatAndValidateCardNumber);
+
+    errorMessage.style.display = 'none';
+});
+            </script>
+
+                
+          
+           
+                
+<label for="validUpto">Valid Upto</label>
+<input type="month" id="validUpto" name="validUpto" placeholder="Enter the validity of the card" required>
+
+
+
+<script>
+    // Function to synchronize "Valid Upto" field with current month and year
+    function synchronizeValidUpto() {
+        const validUptoInput = document.getElementById('validUpto');
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        let month = currentDate.getMonth() + 1; // Adding 1 as getMonth() returns 0-indexed values
+        
+        // Adding leading zero if month is less than 10
+        if (month < 10) {
+            month = '0' + month;
+        }
+
+        // Setting value of validUptoInput to current year and month
+        validUptoInput.value = `${year}-${month}`;
+    }
+
+    // Call the function when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', synchronizeValidUpto);
+
+    // Add event listener to validate entered date
+    document.getElementById('validUpto').addEventListener('input', function() {
+        const validUptoInput = this.value;
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        let month = currentDate.getMonth() + 1; // Adding 1 as getMonth() returns 0-indexed values
+        
+        // Adding leading zero if month is less than 10
+        if (month < 10) {
+            month = '0' + month;
+        }
+
+        const currentDateString = `${year}-${month}`;
+
+        if (validUptoInput < currentDateString) {
+            alert("Please select a valid future month.");
+            this.value = currentDateString;
+        }
+    });
+</script>   
+                <label for="cvvNumber">CVV Number</label>
+                <input type="text" id="cvvNumber" name="cvvNumber" maxlength="3" oninput="validateCVV()" placeholder="Enter the CVV number" required>
+                <div id="errorMessageCVV" style="color: red; display: none;">Please enter a valid 3-digit CVV number</div>
+               <script> function validateCVV() {
+                const cvvInput = document.getElementById('cvvNumber');
+                const errorMessage = document.getElementById('errorMessageCVV');
+                const cvvValue = cvvInput.value.trim();
+    
+                if (cvvValue.length !== 3 || isNaN(cvvValue)) {
+                    errorMessage.style.display = 'block';
+                } else {
+                    errorMessage.style.display = 'none';
+                }
+            }</script> 
+                
+                
+                <label for="cardHolderName">Card Holder Name</label>
+                <input type="text" id="cardHolderName" name="cardHolderName" oninput="convertToUppercase()" placeholder="Enter the Card Holder Name" required>
+                <script>
+                    
+                         function convertToUppercase() {
+                                             var input = document.getElementById("cardHolderName");
+                                             input.value = input.value.toUpperCase();
+                                             var inputValue = input.value.toUpperCase().replace(/[^A-Z]/g, '');
+                                             input.value = inputValue;
+                         }
+                </script>
+
+                <br><br>
+                <button> Make Payment</button>
+                <p></p>
+                <button onclick="window.location.href='homepage.html' "> Home </button>
+
+        </div>
+    </form>
+</body>
+</html>

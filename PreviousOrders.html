@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>BestBuy</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+
+    <style>
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background: #5aa8e3;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 2; 
+        }
+
+        nav h1 {
+            color: white;
+            text-align: justify;
+            padding: 10px;
+            margin: 0;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        nav img {
+            width: 80px;
+            height: 80px;
+            margin-right: auto; 
+        }
+
+        .active {
+            color: white;
+            text-align: right;
+            margin-right: 10px; 
+            margin-right: 10%;
+            font-size: 3em;
+        }
+
+        body {
+            position: relative;
+            background-size: cover;
+            padding: 20px;
+            margin-top: 5%;
+            height: 100%;
+            max-width: 100%;
+        }
+
+        nav h1 {
+            color: white;
+            text-align:justify;
+            padding: 10px;
+            margin: 0%;
+            text-shadow: 2px 2px 5px black;
+            font-size: 2em;
+        }
+
+        nav img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+
+        .ord {
+            position: relative;
+            bottom: 50%;
+            z-index: 1;
+        }
+
+        .dropord {
+            display: none;
+            position: relative; 
+            top: 100%; 
+            background-color: rgb(242, 247, 247);
+            width: 80%;
+            box-shadow: 0px 8px 16px 0px whitesmoke;
+            padding: 12px 16px;
+            z-index: 2;
+        }
+
+        table {
+            width: 90%;
+            border: 2px solid whitesmoke; 
+            border-collapse: collapse; 
+            box-shadow:  5px 10px 8px 5px whitesmoke;
+        }
+
+        th, tr, td {
+            border-bottom: 1px solid rgb(27, 27, 27); 
+            padding: 10px;
+            text-align: center;
+        }
+
+        ul {
+            width: 98%;
+            padding: 5px;
+            font-style:oblique;
+            font-size:larger; 
+            color: black;
+            border: 2px solid #5aa8e3;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow:  5px 10px 8px 0px rgb(78, 175, 239);
+            transition: background-color, box-shadow;
+        }
+
+        ul:hover{
+            background-color: #5aa8e3;
+            box-shadow: 5px 10px 8px 3px whitesmoke;
+        }
+
+        .topnav[type=text] {
+            display: flex;
+            padding: 20px;
+            /* border: none; */
+            /* outline: none; */
+            /* border-bottom: 2px solid black; */
+            border-radius: 10px;
+            width: 80%;
+            align-items: center;
+            position: relative;
+            margin-top: 8px;
+            margin-right: 16px;
+            margin-left: 8%;
+            font-size: 17px;
+            font-style: oblique;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav[type=text] {
+                text-align: center;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .topnav[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+
+        button {
+            width: 50%;
+            height: 100%;
+            padding: 5px;
+            border-radius: 10px;
+            transform: background-color;
+        }
+
+        button:hover {
+            background-color: #4caf50;
+        }
+
+    
+
+    </style>
+
+</head>
+
+<body>
+
+<nav>
+    <img src="logo.jpg" height="90px" width="70px">
+    <h1><ion-icon name="bag-check"></ion-icon> ORDERS <ion-icon name="bag-check"></ion-icon></h1>
+    <a class="active" href="homepage.html"><ion-icon name="home"></ion-icon></a>
+</nav>
+<br>
+<input id="searchInput" class="topnav" type="text" placeholder="Search..">
+<br>
+<div>
+    <div class="ord">
+        <ul type="none">
+            <li>ID: 1232342399</li> 
+            <li>Name: Wings of Fire</li> 
+            <li>Status: Delivered</li> 
+        </ul>
+        <div class="dropord">
+            <span>
+                <table>
+                    <tr>
+                        <th>Books</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Price Details</th>
+                        <!-- <th>Print Receipt</th> -->
+                    </tr>
+                    <tr id="b1">
+                        <th><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588286863i/634583.jpg" width="150" height="200"></th>
+                        <th>
+                            <p>Title:Wings of fire</p>
+                            <p>Author:A P J Abdul Kalam</p>
+                            <p>Category:Autobiography</p>
+                        </th>
+                        <th>10-JAN-2024</th>
+                        <th>500/-</th>
+                        <!-- <th><button class="id1" onclick="b1.print()">Print</button></th> -->
+                    <tr>
+                </table>
+            </span>
+        </div>
+    </div>
+    <div class="ord">
+        <ul type="none">
+            <li>ID: 1232342395</li> 
+            <li>Name:Coding For Beginners </li> 
+            <li>Status: Delivered</li> 
+        </ul>
+        <div class="dropord">
+            <span>
+                <table>
+                    <tr>
+                        <th>Books</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Price Details</th>
+                        <!-- <th>Print Receipt</th> -->
+                    </tr>
+                    <tr>
+                        <th><img src="https://i5.walmartimages.com/asr/d71d9f97-bff4-4d83-a4dc-2e506cea26f1_1.cbe1c88d076ff9ad4b866388debbea67.jpeg" width="150" height="200"></th>
+                        <th>
+                            <p>Title:Coding For Beginners</p>
+                            <p>Author:Alexander Cane</p>
+                            <p>Category:Educational</p>
+                        </th>
+                        <th>10-JAN-2024</th>
+                        <th>500/-</th>
+                        <!-- <th><button class="id1" onclick="window.print()">Print</button></th> -->
+                    <tr>
+                </table>
+            </span>
+        </div>
+    </div>
+    <div class="ord">
+        <ul type="none">
+            <li>ID: 1232342389</li> 
+            <li>Name: Story Thieves</li> 
+            <li>Status: Cancelled</li> 
+        </ul>
+        <div class="dropord">
+            <span>
+                <table>
+                    <tr>
+                        <th>Books</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Price Details</th>
+                        <!-- <th>Print Receipt</th> -->
+                    </tr>
+                    <tr>
+                        <th><img src="https://img1.od-cdn.com/ImageType-100/5054-1/%7BF72BB9B3-F8EE-4C88-B60D-1A7D094F60EA%7DImg100.jpg" width="150" height="200"></th>
+                        <th>
+                            <p>Title:Story Thieves</p>
+                            <p>Author:James Riley</p>
+                            <p>Category:Novel</p>
+                        </th>
+                        <th>10-JAN-2024</th>
+                        <th>500/-</th>
+                        <!-- <th><button type="button" class="id1">Print</button></th> -->
+                    <tr>
+                </table>
+            </span>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.ord').forEach(item => {
+        item.addEventListener('click', event => {
+            let dropord = item.querySelector('.dropord');
+            if (dropord.style.display === "block") {
+                dropord.style.display = "none";
+            } else {
+                dropord.style.display = "block";
+            }
+        });
+    });
+
+    function filterOrders() {
+        // Get the search input value
+        var searchValue = document.getElementById('searchInput').value.toLowerCase();
+        
+        var orders = document.querySelectorAll('.ord');
+
+        // Loop through each order element
+        orders.forEach(function(order) {
+            // Get the order details
+            var orderDetails = order.querySelector('ul');
+            // Get the text content of the order details
+            var orderText = orderDetails.textContent.toLowerCase();
+
+            // If the order text contains the search value, display the order; otherwise, hide it
+            if (orderText.includes(searchValue)) {
+                order.style.display = 'block';
+            } else {
+                order.style.display = 'none';
+            }
+        });
+    }
+
+    // Add event listener to search input
+    document.getElementById('searchInput').addEventListener('input', filterOrders);
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>
